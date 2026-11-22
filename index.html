@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vinicius dos Santos Conceição · Portfolio</title>
+<meta name="description" content="Portfolio of Vinicius dos Santos Conceição, Data Science student at Fatec Adamantina.">
+<style>
+  :root {
+    --bg: #eef1f4;
+    --paper: #ffffff;
+    --ink: #14213d;
+    --soft: #4a5568;
+    --line: #c9d2dc;
+    --accent: #1f6f8b;
+    --bar: #b9d3de;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+
+  header { background: var(--ink); color: #fff; padding: 4rem 0 3.5rem; }
+  header h1 {
+    font-size: clamp(2.1rem, 7vw, 3.4rem);
+    line-height: 1.1;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.01em;
+  }
+  header p { margin: 0.15rem 0; color: #d5deea; }
+  header .degree { font-size: 1.2rem; color: #fff; }
+  header .about { margin-top: 1.25rem; max-width: 36rem; color: #b8c6d8; }
+
+  main { padding: 3rem 0 1rem; }
+  main h2 { font-size: 1.7rem; margin: 0 0 0.5rem; }
+  .meta { color: var(--soft); margin: 0 0 1.75rem; max-width: 40rem; }
+  .block {
+    background: var(--paper);
+    border-left: 5px solid var(--accent);
+    padding: 1.25rem 1.5rem 1.35rem;
+    margin-bottom: 1.25rem;
+  }
+  .block h3 { font-size: 1.2rem; margin: 0 0 0.4rem; }
+  .block p { margin: 0 0 0.75rem; color: var(--soft); max-width: 42rem; }
+  .block p:last-child { margin-bottom: 0; }
+  .block ul { margin: 0; padding-left: 1.2rem; color: var(--soft); }
+  .block li { margin: 0.35rem 0; }
+  .block strong { color: var(--ink); }
+
+  .chart { margin: 1rem 0 0.5rem; }
+  .chart-row { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.75rem; align-items: center; margin: 0.4rem 0; }
+  .chart-label { font-size: 0.95rem; color: var(--ink); }
+  .chart-track { background: #eef3f6; }
+  .chart-bar {
+    background: var(--bar);
+    color: var(--ink);
+    font-size: 0.9rem;
+    padding: 0.15rem 0.5rem;
+    white-space: nowrap;
+  }
+  .chart-bar.top { background: var(--accent); color: #fff; }
+  .note { font-size: 0.9rem; color: var(--soft); margin-top: 0.5rem; }
+
+  footer { margin-top: 2rem; border-top: 1px solid var(--line); padding: 2rem 0 3rem; }
+  footer h2 { font-size: 1.2rem; margin: 0 0 0.75rem; }
+  footer ul { list-style: none; margin: 0; padding: 0; }
+  footer li { margin: 0.3rem 0; }
+
+  @media (max-width: 480px) {
+    header { padding: 3rem 0 2.5rem; }
+    .block { padding: 1rem 1.1rem 1.1rem; }
+    .chart-row { grid-template-columns: 4.5rem 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Vinicius dos Santos Conceição</h1>
+    <p class="degree">Technologist degree in Data Science, 5th term</p>
+    <p>Fatec Adamantina, São Paulo, Brazil</p>
+    <p class="about">I am interested in data analysis, statistics, machine learning and artificial intelligence.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h2>Exploratory Analysis of Sales Data from a Shoe Store Chain</h2>
+    <p class="meta">Integrative Project (Projeto Integrador), Fatec Adamantina, 2026. Pair project.</p>
+
+    <section class="block">
+      <h3>Problem</h3>
+      <p>A retail chain with three branches (Riyadh, Jeddah and Khobar) records thousands of sales, but raw transactions do not show which products, categories and months drive its results. Managers need clear indicators to make decisions.</p>
+    </section>
+
+    <section class="block">
+      <h3>What I Did</h3>
+      <p>I carried out an exploratory analysis of the chain's sales data to evaluate commercial performance and find sales patterns, presenting the findings as indicators and charts that are easy to read.</p>
+    </section>
+
+    <section class="block">
+      <h3>How I Did It</h3>
+      <p>I worked in Python on Google Colab with four datasets: sales (10,000 records), product catalog (365), branches (3) and sales targets (36).</p>
+      <ul>
+        <li><strong>Cleaning:</strong> checked for missing values and duplicates (none found in the sales data), converted dates and created revenue, year, month and day columns.</li>
+        <li><strong>Standardization:</strong> trimmed spaces and lowercased the category and color fields.</li>
+        <li><strong>Analysis:</strong> total revenue, units sold and average ticket, compared by branch, category, color, size, product and month.</li>
+        <li><strong>Tools:</strong> Python, Pandas, Seaborn and Plotly.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h3>Results</h3>
+      <ul>
+        <li><strong>Boots</strong> had the highest revenue, followed by Heels and Formal. Sandals had the lowest.</li>
+        <li>The three branches performed very similarly: Khobar (about 1,680,000), Jeddah (about 1,675,000) and Riyadh (about 1,670,000).</li>
+        <li>In 2024, October had the highest revenue (about 459,500) and March the lowest (about 393,500).</li>
+        <li>The category with the most units sold is not the one with the highest revenue.</li>
+        <li>Size 41 sold the most units (about 6,020); size 36 sold the fewest (about 3,790).</li>
+        <li>The ten products with the highest revenue are all Boots. BO199 and BO934 lead with about 29,100 each.</li>
+      </ul>
+
+      <div class="chart" role="img" aria-label="Bar chart of revenue by category: Boots 1,120,000; Heels 815,000; Formal 785,000; Sandals 405,000">
+        <div class="chart-row"><span class="chart-label">Boots</span><div class="chart-track"><div class="chart-bar top" style="width:100%">1,120,000</div></div></div>
+        <div class="chart-row"><span class="chart-label">Heels</span><div class="chart-track"><div class="chart-bar" style="width:72.8%">815,000</div></div></div>
+        <div class="chart-row"><span class="chart-label">Formal</span><div class="chart-track"><div class="chart-bar" style="width:70.1%">785,000</div></div></div>
+        <div class="chart-row"><span class="chart-label">Sandals</span><div class="chart-track"><div class="chart-bar" style="width:36.2%">405,000</div></div></div>
+      </div>
+      <p class="note">Approximate total revenue by category: the three highest and the lowest.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Contact</h2>
+    <ul>
+      <li>GitHub: <a href="https://github.com/Vinicius740">github.com/Vinicius740</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
